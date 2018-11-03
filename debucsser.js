@@ -1,3 +1,9 @@
+// TODO:
+// - eliminare stylesheet, tutte le rules devono venire da un unico file
+// - migliore file test
+// - perchè ogni tanto non parte removeEventListener? 
+// - modalità negativo?
+
 const container = document.createElement('div');
   container.innerHTML = `
     <style>
@@ -28,7 +34,6 @@ document.addEventListener('keydown', (e) => {
     document.addEventListener('mouseover', lol, true);
     document.addEventListener('mouseout', remove, true);
     if (e.shiftKey) {
-      console.log('alt');
       debugAll(true);
     }
   }

@@ -5,12 +5,21 @@
 // - modalità negativo?
 
 const container = document.createElement('div');
-  container.innerHTML = `
+container.innerHTML = `
     <style>
       * {
         outline: 4px solid #90b9f9;
       }
     </style>`;
+
+const basicStyle = document.createElement('div');
+basicStyle.innerHTML = `
+    <style>
+      .debug {
+        outline: 4px solid #90b9f9;
+      }
+    </style>`;
+document.body.appendChild(basicStyle);
 
 function lol(e) {
   console.log(e.target);
@@ -22,7 +31,7 @@ function remove(e) {
 }
 
 function debugAll(bool) {
-  if(bool) {
+  if (bool) {
     document.body.appendChild(container);
   } else {
     document.body.removeChild(container);

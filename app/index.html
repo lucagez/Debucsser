@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>wow</h1>
@@ -18,7 +18,7 @@
   <div>
     <div>
       <h2>ciao</h2>
-      <p>come state ragazzi tutti a mare??????</p>
+      <p>come state ragazzi??????</p>
     </div>
     <table>
       <td>lol</td>
@@ -47,6 +47,15 @@
       </ul>
     </table>
   </div>
-  <script src="debucsser.js"></script>
+  <script src="src/debucsser.js"></script>
+  <script>
+    const config = {
+      color: 'palevioletred',
+      width: '1px',
+      grayscaleOnDebugAll: true,
+      customClass: 'testShadow',
+    }
+    const debug = new Debucsser(config).init();
+    </script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+{
+  "name": "Debucsser",
+  "version": "1.0.0",
+  "description": "Intuitive Css debugging tool",
+  "main": "index.html",
+  "dependencies": {
+    "browser-sync": "^2.26.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "browser-sync app -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gez",
+  "license": "ISC"
+}

@@ -15,10 +15,17 @@ class Debucsser {
     this.debugAll = this.debugAll.bind(this);
     this.stop = this.stop.bind(this);
     this.addClass = this.addClass.bind(this);
+    // bind also to labels
+    // this.labels = this.labels.bind(this);
     this.createGlobalClass = this.createGlobalClass.bind(this);
     this.removeGlobalClass = this.removeGlobalClass.bind(this);
   }
   init() {
+    // initialize label element to fill later with classnames
+    this.label = document.createElement('div');
+    this.label.style = 'display: none;';
+    document.body.appendChild(this.label);
+
     this.createDebugStyle();
     this.debug();
     this.globalStyle = this.createGlobalClass();
@@ -27,6 +34,8 @@ class Debucsser {
     console.log(this);
     document.addEventListener('keydown', (key) => {
       if (key.keyCode == this.mainKey) {
+        // ! adding listeners for labels
+        document.addEventListener('mousemove', this.labels, true);
         document.addEventListener('mouseover', this.addClass, true);
         document.addEventListener('keydown', this.debugAll, true);
       }
@@ -41,7 +50,6 @@ class Debucsser {
     })
   }
   addClass(over) {
-    console.log(`${this.customClass}`);
     over.target.classList.add(this.customClass ? this.customClass : 'debucsser');
     document.addEventListener('mouseout', (out) => {
       out.target.classList.remove(this.customClass ? this.customClass : 'debucsser');
@@ -80,4 +88,18 @@ class Debucsser {
       document.body.removeChild(this.globalStyle);
     }
   }
+
+  // TODO: labels not working!
+  // labels(e) {
+  //   console.log(e.target.classList);
+  //   if (e.target.classList[0]) {
+  //     this.label.innerHTML = `
+  //       <h2>${e.target.classlist[0]}</h2>
+  //       <p>${e.target}</p>
+  //     `;
+  //     this.label.style = `display: block; position: fixed; z-index: 999; top:${e.clientY + 20}px; left:${e.clientX + 20}px;`;
+  //   } else {
+  //     this.label.style = 'display: none;'
+  //   }
+  // }
 }

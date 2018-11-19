@@ -16,7 +16,7 @@ class Debucsser {
     this.stop = this.stop.bind(this);
     this.addClass = this.addClass.bind(this);
     // bind also to labels
-    // this.labels = this.labels.bind(this);
+    this.labels = this.labels.bind(this);
     this.createGlobalClass = this.createGlobalClass.bind(this);
     this.removeGlobalClass = this.removeGlobalClass.bind(this);
   }
@@ -34,7 +34,6 @@ class Debucsser {
     console.log(this);
     document.addEventListener('keydown', (key) => {
       if (key.keyCode == this.mainKey) {
-        // ! adding listeners for labels
         document.addEventListener('mousemove', this.labels, true);
         document.addEventListener('mouseover', this.addClass, true);
         document.addEventListener('keydown', this.debugAll, true);
@@ -46,6 +45,8 @@ class Debucsser {
     document.addEventListener('keyup', (key) => {
       if (key.keyCode == this.mainKey) {
         document.removeEventListener('mouseover', this.addClass, true);
+        document.removeEventListener('mousemove', this.labels, true);
+        this.label.style = 'display: none;';
       }
     })
   }
@@ -88,18 +89,15 @@ class Debucsser {
       document.body.removeChild(this.globalStyle);
     }
   }
-
-  // TODO: labels not working!
-  // labels(e) {
-  //   console.log(e.target.classList);
-  //   if (e.target.classList[0]) {
-  //     this.label.innerHTML = `
-  //       <h2>${e.target.classlist[0]}</h2>
-  //       <p>${e.target}</p>
-  //     `;
-  //     this.label.style = `display: block; position: fixed; z-index: 999; top:${e.clientY + 20}px; left:${e.clientX + 20}px;`;
-  //   } else {
-  //     this.label.style = 'display: none;'
-  //   }
-  // }
+  labels(e) {
+    const classList = e.target.classList ? e.target.classList : undefined;
+    if (classList) {
+      this.label.innerHTML = `
+        <h2>${classList.value.replace('debucsser', '')}</h2>
+      `;
+      this.label.style = `display: block; position: fixed; z-index: 999; top:${e.clientY + 20}px; left:${e.clientX + 20}px;`;
+    } else {
+      this.label.style = 'display: none;';
+    }
+  }
 }

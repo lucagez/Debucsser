@@ -95,7 +95,8 @@ class Debucsser {
       this.label.innerHTML = `
         <h2>${classList.value.replace('debucsser', '')}</h2>
       `;
-      this.label.style = `display: block; position: fixed; z-index: 999; top:${e.clientY + 20}px; left:${e.clientX + 20}px;`;
+      // modify style to make label more readable
+      this.label.style = `display: block; padding: 10px 20px; background: #333; color: #fff; position: fixed; z-index: 999; top:${e.clientY + 20}px; left:${e.clientX + 20}px;`;
     } else {
       this.label.style = 'display: none;';
     }

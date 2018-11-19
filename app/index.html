@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,33 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="wrapper">
-    <div class="box a">A</div>
-    <div class="box b">B</div>
-    <div class="box c">C</div>
-    <div class="box d">D</div>
+    <header class="box header">
+      <h1>The Css Times</h1>
+      <p>Hold <strong>CTRL</strong> and hover on everything</p>
+      <p>Instructions all along the page</p>
+    </header>
+    <div class="box main-article">
+      <div>
+        <img src="https://www.mojos.it/wordpress/wp-content/uploads/2013/05/css3-logo.png" alt="">
+        <h1>Debuccser</h1>
+        <p>The super fast and intuitive Css debugging tool</p>
+      </div>
+    </div>
+    <aside class="box sidebar">aside</aside>
+    <div class="box article-container">
+      <div class="box article">article</div>
+      <div class="box article">article</div>
+      <div class="box article">article</div>
+      <div class="box article">article</div>
+      <div class="box article">article</div>
+      <div class="box article">article</div>
+      <div class="box article">article</div>
+      <div class="box article">article</div>
+      <div class="box article">article</div>
+    </div>
   </div>
   <script src="src/debucsser.js"></script>
   <script>
@@ -23,6 +45,7 @@
       // customClass: 'testShadow',
     }
     const debug = new Debucsser(config).init();
-    </script>
+  </script>
 </body>
+
 </html>

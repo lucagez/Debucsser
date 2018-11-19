@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=UnifrakturCook:700');
+
 .testShadow {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
@@ -9,8 +11,12 @@ body {
 .wrapper {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(1fr);
-  grid-template-rows: 600px;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header"
+    "main sidebar"
+    "article-container sidebar";
   background-color: #fff;
   color: #444;
 }
@@ -20,26 +26,26 @@ body {
   color: #fff;
   border-radius: 5px;
   padding: 20px;
-  font-size: 150%;
-
 }
 
-.a {
-  grid-column: 1 / 3;
-  grid-row: 1;
+.header {
+  grid-area: header;
+  text-align: center;
 }
 
-.b {
-  grid-column: 3;
-  grid-row: 1 / 3;
+.header h1 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 48px;
 }
 
-.c {
-  grid-column: 1;
-  grid-row: 2;
+.main-article {
+  grid-area: main;
 }
 
-.d {
-  grid-column: 2;
-  grid-row: 2;
+.sidebar {
+  grid-area: sidebar;
+}
+
+.article-container {
+  grid-area: article-container;
 }

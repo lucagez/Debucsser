@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=UnifrakturCook:700');
 
+/* ⬇ class for test purpose ⬇ */
+
 .testShadow {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
+
+
+/* ⬇ code useful only for this pen ⬇ */
 
 body {
   margin: 40px;
@@ -48,4 +53,15 @@ body {
 
 .article-container {
   grid-area: article-container;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    grid-template-columns: auto;
+    grid-template-areas: 
+      "header"
+      "main"
+      "sidebar"
+      "article-container";
+  }
 }

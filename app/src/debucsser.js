@@ -1,27 +1,26 @@
 class Debucsser {
   constructor(props) {
-    const config = props ? props : {};
-    this.color = config.color || '#333';
-    this.width = config.width || '3px';
-    this.style = config.style || 'solid';
-    this.customClass = config.customClass || null;
-    this.grayscaleOnDebug = config.grayscaleOnDebug || false;
-    this.grayscaleOnDebugAll = config.grayscaleOnDebugAll || false;
+    this.config = props || {};
+    this.color = this.config.color || 'palevioletred';
+    this.width = this.config.width || '3px';
+    this.style = this.config.style || 'solid';
+    this.customClass = this.config.customClass || null;
+    this.grayscaleOnDebug = this.config.grayscaleOnDebug || false;
+    this.grayscaleOnDebugAll = this.config.grayscaleOnDebugAll || false;
     this.string = `${this.width} ${this.style} ${this.color}`;
-    this.mainKey = config.mainKey || 17;
-    this.secondKey = config.secondKey || 16;
+    this.mainKey = this.config.mainKey || 17;
+    this.secondKey = this.config.secondKey || 16;
     this.init = this.init.bind(this);
     this.debug = this.debug.bind(this);
     this.debugAll = this.debugAll.bind(this);
     this.stop = this.stop.bind(this);
     this.addClass = this.addClass.bind(this);
-    // bind also to labels
     this.labels = this.labels.bind(this);
     this.createGlobalClass = this.createGlobalClass.bind(this);
     this.removeGlobalClass = this.removeGlobalClass.bind(this);
   }
   init() {
-    // initialize label element to fill later with classnames
+    // initialize invisible label element => we'll make it visible on selected keystroke
     this.label = document.createElement('div');
     this.label.classList.add('debucsser-label');
     this.label.style = 'display: none;';
@@ -70,18 +69,19 @@ class Debucsser {
     <style>
       .debucsser {
         outline: ${this.string};
-        ${config.grayscaleOnDebug && 'filter: grayscale(100%);'}
+        ${this.config.grayscaleOnDebug && 'filter: grayscale(100%);'}
       }
     </style>`;
     document.body.appendChild(style);
   }
   createGlobalClass() {
     const global = document.createElement('div');
+    console.log(this.config.grayscaleOnDebugAll)
     global.innerHTML = `
     <style>
       * {
         outline: ${this.string};
-        ${config.grayscaleOnDebugAll && 'filter: grayscale(100%);'}
+        ${this.config.grayscaleOnDebugAll && 'filter: grayscale(100%);'}
       }
     </style>`;
     return global;

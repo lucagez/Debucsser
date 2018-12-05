@@ -18,7 +18,7 @@ body {
   grid-gap: 10px;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
     "header header"
     "main sidebar"
     "article-container sidebar";
@@ -43,9 +43,24 @@ body {
   font-size: 48px;
 }
 
-.main-article {
+#main-article {
   grid-area: main;
 }
+
+#main-article .content {
+  padding: 0 20px;
+  -webkit-columns: 150px 3;
+  -moz-columns: 150px 3;
+  columns: 150px 3;
+}
+
+aside .content {
+  padding: 0 20px;
+  -webkit-columns: 150px 2;
+  -moz-columns: 150px 2;
+  columns: 150px 2;
+}
+
 
 .sidebar {
   grid-area: sidebar;
@@ -58,7 +73,7 @@ body {
 @media screen and (max-width: 1024px) {
   .wrapper {
     grid-template-columns: auto;
-    grid-template-areas: 
+    grid-template-areas:
       "header"
       "main"
       "sidebar"

@@ -23,9 +23,11 @@ class Debucsser {
   init() {
     // initialize label element to fill later with classnames
     this.label = document.createElement('div');
+    this.label.classList.add('debucsser-label');
     this.label.style = 'display: none;';
     document.body.appendChild(this.label);
 
+    this.inject_label_style();
     this.createDebugStyle();
     this.debug();
     this.globalStyle = this.createGlobalClass();
@@ -90,15 +92,36 @@ class Debucsser {
     }
   }
   labels(e) {
-    const classList = e.target.classList ? e.target.classList : undefined;
-    if (classList) {
+    if (e.target) {
+      const classList = e.target.classList ? e.target.classList.value.replace('debucsser', '') : undefined;
+      const id = e.target.id ? '#' + e.target.id : undefined;
       this.label.innerHTML = `
-        <h2>${classList.value.replace('debucsser', '')}</h2>
+        <h2>class: <strong>${classList || `¯\\_(ツ)_/¯`}</strong></h2>
+        <h2>id: <strong>${id || `¯\\_(ツ)_/¯`}</strong></h2>
       `;
-      // modify style to make label more readable
-      this.label.style = `display: block; padding: 10px 20px; background: #333; color: #fff; position: fixed; z-index: 999; top:${e.clientY + 20}px; left:${e.clientX + 20}px;`;
+      this.label.style = `display: block; top:${e.clientY + 20}px; left:${e.clientX + 20}px;`;
     } else {
       this.label.style = 'display: none;';
     }
+  }
+  inject_label_style() {
+    const style = document.createElement('div');
+    style.innerHTML = `
+    <style>
+      .debucsser-label {
+        position: fixed; 
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        padding: 10px 20px; 
+        background: #333; 
+        border-radius: 3px;
+        color: #f9f9f9; 
+        opacity: 0.9;
+        z-index: 999;
+      }
+      .debucsser-label strong {
+        color: palevioletred;
+      }
+    </style>`;
+    document.body.appendChild(style);
   }
 }

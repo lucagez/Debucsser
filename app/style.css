@@ -10,7 +10,7 @@
 /* ⬇ code useful only for this pen ⬇ */
 
 body {
-  margin: 40px;
+  margin: 0;
   font-family: Georgia, serif;
 }
 
@@ -18,7 +18,21 @@ hr {
   width: 70%;
 }
 
+button {
+  display: block;
+  margin: auto;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  color: #444;
+  font-size: 21px;
+  cursor: pointer;
+}
+
 .wrapper {
+  filter: brightness(10%);
+  width: 100%;
+  margin: 0;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 3fr 2fr;
@@ -79,6 +93,8 @@ aside .content {
 
 .content {
   margin: 40px 0 40px 0;
+  font-family: Georgia, serif;
+  font-weight: 400;
 }
 
 .main-article-image, .The-luckiest-man, .Demostenes, #Chief-Joseph, #jfk, #Alexander {
@@ -89,6 +105,27 @@ aside .content {
 
 .git {
   margin: 20px;
+}
+
+.explain {
+  opacity: 0.9;
+  background: #444;
+  color: #fff;
+  position: fixed;
+  max-width: 500px;
+  max-height: 500px;
+  padding: 30px;
+  z-index: 999;
+  border-radius: 3px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  top: 50%;
+  left: 50%;
+  transition: transform 1s;
+  transform: translate(-50%, -50%);
+}
+
+.explain h1, .explain strong {
+  color: palegoldenrod;
 }
 
 @media screen and (max-width: 960px) {

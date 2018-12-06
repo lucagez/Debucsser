@@ -127,3 +127,9 @@ class Debucsser {
     document.body.appendChild(style);
   }
 }
+
+const explain = document.querySelector('.explain');
+explain.querySelector('button').addEventListener('click', () => {
+  explain.style.transform = 'translateX(2000px)';
+  document.querySelector('.wrapper').style.filter = 'none';
+});

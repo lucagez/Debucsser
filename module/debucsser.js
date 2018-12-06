@@ -1,4 +1,4 @@
-class Debucsser {
+export default class Debucsser {
   constructor(props) {
     this.config = props || {};
     this.color = this.config.color || 'palevioletred';
@@ -127,11 +127,3 @@ class Debucsser {
     document.body.appendChild(style);
   }
 }
-
-
-// only for demo purpose
-const explain = document.querySelector('.explain');
-explain.querySelector('button').addEventListener('click', () => {
-  explain.style.transform = 'translateX(2000px)';
-  document.querySelector('.wrapper').style.filter = 'none';
-});

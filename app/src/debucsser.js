@@ -128,6 +128,8 @@ class Debucsser {
   }
 }
 
+
+// only for demo purpose
 const explain = document.querySelector('.explain');
 explain.querySelector('button').addEventListener('click', () => {
   explain.style.transform = 'translateX(2000px)';

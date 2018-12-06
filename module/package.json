@@ -1,0 +1,20 @@
+{
+  "name": "debucsser",
+  "version": "1.0.0",
+  "description": "CSS debugging tool with an unpronounceable name",
+  "main": "debucsser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucagez/Debucsser.git"
+  },
+  "keywords": ["css","debugger","debugging","debug","debug","css","debugging","tool"],
+  "author": "Luca Gesmundo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucagez/Debucsser/issues"
+  },
+  "homepage": "https://github.com/lucagez/Debucsser#readme"
+}

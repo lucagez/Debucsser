@@ -1,8 +1,6 @@
 {
-  "name": "Debucsser",
-  "version": "1.0.0",
-  "description": "Intuitive Css debugging tool",
-  "main": "index.html",
+  "name": "DebucsserDEMO",
+  "main": "index.js",
   "dependencies": {
     "browser-sync": "^2.26.3"
   },
@@ -11,6 +9,6 @@
     "start": "browser-sync app -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "gez",
-  "license": "ISC"
+  "author": "Luca Gemsundo",
+  "license": "MIT"
 }

@@ -11,6 +11,11 @@
 
 body {
   margin: 40px;
+  font-family: Georgia, serif;
+}
+
+hr {
+  width: 70%;
 }
 
 .wrapper {
@@ -27,9 +32,7 @@ body {
 }
 
 .box {
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
+  color: #444;
   padding: 20px;
 }
 
@@ -41,10 +44,12 @@ body {
 .header h1 {
   font-family: 'UnifrakturCook', cursive;
   font-size: 48px;
+  margin: 0;
 }
 
 #main-article {
   grid-area: main;
+  border-right: 1px solid #999;
 }
 
 #main-article .content {
@@ -68,6 +73,28 @@ aside .content {
 
 .article-container {
   grid-area: article-container;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content {
+  margin: 40px 0 40px 0;
+}
+
+.main-article-image, .The-luckiest-man, .Demostenes, #Chief-Joseph, #jfk, #Alexander {
+  border-radius: 3px;
+  display: block;
+  margin: auto;
+}
+
+.git {
+  margin: 20px;
+}
+
+@media screen and (max-width: 960px) {
+  .article-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 1024px) {

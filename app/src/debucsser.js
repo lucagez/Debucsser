@@ -99,7 +99,7 @@ class Debucsser {
       this.label.innerHTML = `
         <h2>class: <strong>${classList || `¯\\_(ツ)_/¯`}</strong></h2>
         <h2>id: <strong>${id || `¯\\_(ツ)_/¯`}</strong></h2>
-        <h2><strong>${dimensions.width.toFixed(0)}px</strong> ˣ <strong>${dimensions.height.toFixed(0)}px</strong></h2>
+        <h2><strong>${dimensions.width.toFixed(0)}px</strong> × <strong>${dimensions.height.toFixed(0)}px</strong></h2>
       `;
       this.label.style = `display: block; top:${e.clientY + 20}px; left:${e.clientX + 20}px;`;
     } else {

@@ -112,6 +112,12 @@ Set the key to use alternatively to SHIFT.
 Type: number **Default:** 16
 
 
+# Contributing
+If you have any idea on how to make Debucsser better don't hesitate 😎
 
+Fork ➡ new branch ➡ PR 🎉
+
+# License
+MIT
 
 

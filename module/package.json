@@ -1,6 +1,6 @@
 {
   "name": "debucsser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CSS debugging tool with an unpronounceable name",
   "main": "debucsser.js",
   "scripts": {

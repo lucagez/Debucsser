@@ -6,7 +6,7 @@ CSS debugging tool with an unpronounceable name
 
 ## Demo
 
-codepen link
+https://codepen.io/lucagez/full/LMEerQ
 
 
 
@@ -17,10 +17,7 @@ If you are using a bundler:
 ```npm install debucsser```
 
 
-
-Alternatively:
-
-CDNJS link
+Alternatively download debucsser.js in /module folder and link it in your html
 
 ## Why
 

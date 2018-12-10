@@ -1,3 +1,7 @@
+![](/gif/debucsser.gif)
+
+
+
 # DebuCSSer
 
 CSS debugging tool with an unpronounceable name

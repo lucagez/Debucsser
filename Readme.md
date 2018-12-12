@@ -23,6 +23,8 @@ If you are using a bundler:
 
 Alternatively download debucsser.js in /module folder and link it in your html
 
+**a chrome extension is under development**
+
 ## Why
 
 Debucsser is a simple CSS debugging tool made to be unobtrusive in your workflow.
@@ -113,6 +115,10 @@ Type: number **Default:** 16
 
 
 # Contributing
+TODO:
+- make a usable chrome extension (very experimental by now)
+- improve default styling of label
+
 If you have any idea on how to make Debucsser better don't hesitate 😎
 
 Fork ➡ new branch ➡ PR 🎉

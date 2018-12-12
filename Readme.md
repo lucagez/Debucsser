@@ -115,7 +115,7 @@ Type: number **Default:** 16
 
 
 # Contributing
-TODO:
+**TODO:**
 - make a usable chrome extension (very experimental by now)
 - improve default styling of label
 

@@ -34,7 +34,6 @@ class Debucsser {
     this.globalStyle = this.createGlobalClass();
   }
   debug() {
-    console.log(this);
     document.addEventListener('keydown', (key) => {
       if (key.keyCode == this.mainKey) {
         document.addEventListener('mousemove', this.labels, true);
@@ -78,7 +77,6 @@ class Debucsser {
   }
   createGlobalClass() {
     const global = document.createElement('div');
-    console.log(this.config.grayscaleOnDebugAll)
     global.innerHTML = `
     <style>
       * {

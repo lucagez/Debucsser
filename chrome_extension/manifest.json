@@ -1,0 +1,21 @@
+{
+  "name": "Debucsser",
+  "version": "0.0.1",
+  "manifest_version": 1,
+  "description": "CSS debugging made easy",
+  "homepage_url": "https://github.com/lucagez/Debucsser",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Debucsser"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ]
+}

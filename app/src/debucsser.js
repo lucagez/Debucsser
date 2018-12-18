@@ -32,7 +32,6 @@ class Debucsser {
     this.globalStyle = this.createGlobalClass();
   }
   debug() {
-    console.log(this);
     document.addEventListener('keydown', (key) => {
       if (key.keyCode == this.mainKey) {
         document.addEventListener('mousemove', this.labels, true);
@@ -64,26 +63,23 @@ class Debucsser {
     }
   }
   createDebugStyle() {
-    const style = document.createElement('div');
+    const style = document.createElement('style');
     style.innerHTML = `
-    <style>
       .debucsser {
         outline: ${this.string};
         ${this.config.grayscaleOnDebug && 'filter: grayscale(100%);'}
       }
-    </style>`;
+    `;
     document.body.appendChild(style);
   }
   createGlobalClass() {
-    const global = document.createElement('div');
-    console.log(this.config.grayscaleOnDebugAll)
+    const global = document.createElement('style');
     global.innerHTML = `
-    <style>
       * {
         outline: ${this.string};
         ${this.config.grayscaleOnDebugAll && 'filter: grayscale(100%);'}
       }
-    </style>`;
+    `;
     return global;
   }
   removeGlobalClass(key) {
@@ -107,23 +103,22 @@ class Debucsser {
     }
   }
   inject_label_style() {
-    const style = document.createElement('div');
+    const style = document.createElement('style');
     style.innerHTML = `
-    <style>
       .debucsser-label {
-        position: fixed; 
+        position: fixed;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        padding: 10px 20px; 
-        background: #333; 
+        padding: 10px 20px;
+        background: #333;
         border-radius: 3px;
-        color: #f9f9f9; 
+        color: #f9f9f9;
         opacity: 0.9;
         z-index: 999;
       }
       .debucsser-label strong {
         color: palevioletred;
       }
-    </style>`;
+    `;
     document.body.appendChild(style);
   }
 }

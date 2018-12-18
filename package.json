@@ -1,6 +1,6 @@
 {
   "name": "DebucsserDEMO",
-  "main": "index.js",
+  "main": "src/debucsser.js",
   "dependencies": {
     "browser-sync": "^2.26.3"
   },

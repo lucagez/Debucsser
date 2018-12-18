@@ -1,5 +1,3 @@
-// TODO: add config feature from chrome extension tab
-
 class Debucsser {
   constructor(props) {
     this.config = props || {};
@@ -65,25 +63,23 @@ class Debucsser {
     }
   }
   createDebugStyle() {
-    const style = document.createElement('div');
+    const style = document.createElement('style');
     style.innerHTML = `
-    <style>
       .debucsser {
         outline: ${this.string};
         ${this.config.grayscaleOnDebug && 'filter: grayscale(100%);'}
       }
-    </style>`;
+    `;
     document.body.appendChild(style);
   }
   createGlobalClass() {
-    const global = document.createElement('div');
+    const global = document.createElement('style');
     global.innerHTML = `
-    <style>
       * {
         outline: ${this.string};
         ${this.config.grayscaleOnDebugAll && 'filter: grayscale(100%);'}
       }
-    </style>`;
+    `;
     return global;
   }
   removeGlobalClass(key) {
@@ -107,9 +103,8 @@ class Debucsser {
     }
   }
   inject_label_style() {
-    const style = document.createElement('div');
+    const style = document.createElement('style');
     style.innerHTML = `
-    <style>
       .debucsser-label {
         position: fixed;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -123,7 +118,7 @@ class Debucsser {
       .debucsser-label strong {
         color: palevioletred;
       }
-    </style>`;
+    `;
     document.body.appendChild(style);
   }
 }

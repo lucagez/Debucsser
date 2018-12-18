@@ -61,8 +61,8 @@ When you have done this, simply hold **`CTRL`** or **`CTRL`** + **`SHIFT`** and 
 | `grayscaleOnDebug`    | { bool }  | false         | Apply grayscale filter on hovered element while holding `CTRL`.       |
 | `grayscaleOnDebugAll` | { bool }  | false         | Apply grayscale filter on all elements while holding `CTRL` + `SHIFT`.|
 | `customClass`         | { string }   | null          | Apply custom class on hovered element while holding `CTRL`.           |
-| `mainKey`             | { number }   | 17            | Set the key to use alternatively to `CTRL`.                           |
-| `secondKey`           | { number }   | 16            | Set the key to use alternatively to `SHIFT`.                          |
+| `mainKey`             | {number}    | 17            | Set the key to use alternatively to `CTRL`.                           |
+| `secondKey`           | {number}    | 16            | Set the key to use alternatively to `SHIFT`.                          |
 
 ## Contributing
 

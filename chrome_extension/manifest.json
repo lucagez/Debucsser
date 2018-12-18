@@ -5,7 +5,8 @@
   "description": "CSS debugging made easy",
   "homepage_url": "https://github.com/lucagez/Debucsser",
   "browser_action": {
-    "default_title": "Debucsser"
+    "default_title": "Debucsser",
+    "default_popup": "popup.html"
   },
   "background": {
     "scripts": [
@@ -16,6 +17,7 @@
   "permissions": [
     "https://*/*",
     "http://*/*",
-    "tabs"
+    "tabs",
+    "storage"
   ]
 }

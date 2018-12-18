@@ -111,12 +111,12 @@ class Debucsser {
     style.innerHTML = `
     <style>
       .debucsser-label {
-        position: fixed; 
+        position: fixed;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        padding: 10px 20px; 
-        background: #333; 
+        padding: 10px 20px;
+        background: #333;
         border-radius: 3px;
-        color: #f9f9f9; 
+        color: #f9f9f9;
         opacity: 0.9;
         z-index: 999;
       }
@@ -128,6 +128,5 @@ class Debucsser {
   }
 }
 
-
-// init debucsser without custom config 
-const debug = new Debucsser().init();
+// init debucsser without custom config
+let debug = new Debucsser().init();

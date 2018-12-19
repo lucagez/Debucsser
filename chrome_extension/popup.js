@@ -7,7 +7,7 @@
 function saveSettings (event) {
   const field = event.target;
   const key = field.name;
-  const value = field.value;
+  const value = field.type !== "checkbox" ? field.value : field.checked;
 
   // Create a key value pair for each form field based on the html name and value of the field.
   chrome.storage.sync.set({ [key]: value}, () => {
@@ -17,7 +17,12 @@ function saveSettings (event) {
 
 function applySettings (field) {
   chrome.storage.sync.get([field.name], (result) => {
-    field.value = result[field.name];
+    const value = result[field.name];
+    if (field.type !== "checkbox") {
+      field.value = value;
+    } else {
+      field.checked = value;
+    }
   });
 }
 

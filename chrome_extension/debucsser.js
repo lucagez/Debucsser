@@ -30,6 +30,7 @@ class Debucsser {
     this.createDebugStyle();
     this.debug();
     this.globalStyle = this.createGlobalClass();
+    return this
   }
   debug() {
     document.addEventListener('keydown', (key) => {
@@ -124,4 +125,11 @@ class Debucsser {
 }
 
 // init debucsser without custom config
-let debug = new Debucsser().init();
+let debucsser = new Debucsser().init();
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  const settings = request.settings
+  debucsser = new Debucsser(settings).init();
+  sendResponse({request, sender, debucsser})
+  return true;
+})

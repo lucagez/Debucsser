@@ -71,17 +71,17 @@
 <body>
   <h1>DebuCSSer</h1>
   <label class="switch">
-    <input type="checkbox" name="active">
+    <input type="checkbox" checked name="active" id="debucsser-launcher">
     <span class="slider round"></span>
   </label> Activate
   <br />
   <form id="debucsser-settings">
     <label>Outline Color</label>
-    <input type="color" name="outlineColor" class="debucsser-form-field" />
+    <input type="color" name="color" class="debucsser-form-field" />
     <label>Outline Width</label>
-    <input type="number" name="outlineWidth" class="debucsser-form-field" />
+    <input type="number" name="width" class="debucsser-form-field" />
     <label>Outline style</label>
-    <select name="outlineStyle" class="debucsser-form-field">
+    <select name="style" class="debucsser-form-field">
       <option selected>solid</option>
       <option>dashed</option>
       <option>dotted</option>
@@ -101,6 +101,7 @@
     <input type="checkbox" name="grayscaleOnDebug" class="debucsser-form-field" value="true">
     <label>Grayscale On Debug All</label>
     <input type="checkbox" name="grayscaleOnDebugAll" class="debucsser-form-field" value="true">
+    <input type="submit" value="Save Settings" />
   </form>
   <script src="popup.js"></script>
 </body>

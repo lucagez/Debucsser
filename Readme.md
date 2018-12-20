@@ -5,7 +5,7 @@
 
 CSS debugging tool with an unpronounceable name.
 
-### [Codepen Demo](https://codepen.io/lucagez/full/LMEerQ)
+## [Codepen Demo](https://codepen.io/lucagez/full/LMEerQ)
 
 ## Installation
 
@@ -27,7 +27,7 @@ With Debucsser I simply hold **`CTRL`** and move my mouse around to see the dime
 
 If you  hold **`CTRL`** + **`SHIFT`** you apply the outline class to all the elements on the page by adding a global class.
 
-You can configure some parameters.
+You can configure some [parameters](#props).
 
 I find handy the possibility to specify a custom class I want to apply to different elements without the need to comment and uncomment the my css files.
 
@@ -53,20 +53,20 @@ When you have done this, simply hold **`CTRL`** or **`CTRL`** + **`SHIFT`** and 
 
 ## Props
 
-|       property        |  propType    |    default    |                              description                              |
-| :-------------------- | ------------  | ------------: | :-------------------------------------------------------------------- |
-| `color`               | { string }   | palevioletred | Outline color.                                                        |
-| `width`               | { string }   | 3px           | Outline width.                                                        |
-| `style`               | { string }   | solid         | Outline style.                                                        |
-| `grayscaleOnDebug`    | { bool }  | false         | Apply grayscale filter on hovered element while holding `CTRL`.       |
-| `grayscaleOnDebugAll` | { bool }  | false         | Apply grayscale filter on all elements while holding `CTRL` + `SHIFT`.|
-| `customClass`         | { string }   | null          | Apply custom class on hovered element while holding `CTRL`.           |
-| `mainKey`             | {number}    | 17            | Set the key to use alternatively to `CTRL`.                           |
-| `secondKey`           | {number}    | 16            | Set the key to use alternatively to `SHIFT`.                          |
+|       property        |  propType  |    default    |                              description                               |
+| :-------------------- | ---------- | ------------: | :--------------------------------------------------------------------- |
+| `color`               | { string } | palevioletred | Outline color.                                                         |
+| `width`               | { string } |           3px | Outline width.                                                         |
+| `style`               | { string } |         solid | Outline style.                                                         |
+| `grayscaleOnDebug`    | { bool }   |         false | Apply grayscale filter on hovered element while holding `CTRL`.        |
+| `grayscaleOnDebugAll` | { bool }   |         false | Apply grayscale filter on all elements while holding `CTRL` + `SHIFT`. |
+| `customClass`         | { string } |          null | Apply custom class on hovered element while holding `CTRL`.            |
+| `mainKey`             | {number}   |            17 | Set the key to use alternatively to `CTRL`.                            |
+| `secondKey`           | {number}   |            16 | Set the key to use alternatively to `SHIFT`.                           |
 
 ## Contributing
 
-Fork ➡ new branch ➡ PR 🎉
+Fork  ➡ new branch  ➡ PR 🎉
 
 **TODO:**
 
@@ -75,6 +75,6 @@ Fork ➡ new branch ➡ PR 🎉
 
 If you have any idea on how to make Debucsser better don't hesitate 😎
 
-#### License
+## License
 
-MIT
+[MIT](https://github.com/lucagez/Debucsser/blob/master/LICENSE)

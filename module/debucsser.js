@@ -91,10 +91,14 @@ export default class Debucsser {
     if (e.target) {
       const classList = e.target.classList ? e.target.classList.value.replace('debucsser', '') : undefined;
       const id = e.target.id ? '#' + e.target.id : undefined;
+      let id_html = `<h2>id: <strong>${id || ``}</strong></h2>`;
+      if(!id)id_html='';
+      let class_html = `<h2>class: <strong>${classList || ``}</strong></h2>`;
+      if(!classList)class_html='';
       const dimensions = e.target.getBoundingClientRect();
       this.label.innerHTML = `
-        <h2>class: <strong>${classList || `¯\\_(ツ)_/¯`}</strong></h2>
-        <h2>id: <strong>${id || `¯\\_(ツ)_/¯`}</strong></h2>
+        ${class_html}
+        ${id_html}
         <h2><strong>${dimensions.width.toFixed(0)}px</strong> × <strong>${dimensions.height.toFixed(0)}px</strong></h2>
       `;
       this.label.style = `display: block; top:${e.clientY + 20}px; left:${e.clientX + 20}px;`;
